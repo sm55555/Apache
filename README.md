@@ -13,3 +13,10 @@ enviroment : amazon linux 2
 
 * * *
 
+### 2. Main directory
+
+content directory -> cd /etc/html/www
+
+* * *
+
+
