@@ -1,4 +1,4 @@
-### apache
+# apache
 enviroment : amazon linux 2
 
 ### 1. How to install apache web server
@@ -8,4 +8,6 @@ enviroment : amazon linux 2
 -> sudo systemctl start httpd
 
 -> sudo systemctl status httpd
+
+* * *
 
