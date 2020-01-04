@@ -9,6 +9,8 @@ enviroment : amazon linux 2
 
 -> sudo systemctl status httpd
 
+-> sudo systemctl stop httpd
+
 !!! you have to open 80 port using Security Group
 
 * * *
