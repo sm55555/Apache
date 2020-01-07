@@ -1,7 +1,7 @@
 # apache
 enviroment : amazon linux 2
 
-### 1. How to install apache web server
+### 1. How to install apache web server (using yum)
 
 -> sudo yum install httpd -y
 
