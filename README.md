@@ -31,7 +31,7 @@ you need make, complier to install apache
 
 install Lasted Version
 ~~~
-yum -y install gcc gcc-c++
+yum -y install gcc gcc-c++ (yum list | grep gcc)
 
 cd /usr/local/src
 wget http://ftp.neowiz.com/apache/httpd/httpd-2.4.38.tar.bz2
