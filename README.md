@@ -96,14 +96,6 @@ make[1]: Leaving directory `/usr/local/src/pcre-8.33'
 
 -> --prefix=/usr/local/apache2 means your apache homefolder
 
--> if configure: error: Cannot use an external APR-util with the bundled APR error occurred 
-
-using ./configure --prefix=/usr/local/apache2 --with-included-apr
-
--> if the error "configure: error: pcre-config for libpcre not found. PCRE is required and available from" appears 
-
--> yum install pcre-devel
-
 ~~~
 cd /usr/local/src/httpd-2.4.27
 ./configure --prefix=/usr/local/apache2
@@ -120,6 +112,15 @@ config.status: creating include/ap_config_auto.h
 config.status: executing default commands
 ~~~
 
+-> if the error "configure: error: Cannot use an external APR-util with the bundled APR error occurred" appears 
+
+-> ./configure --prefix=/usr/local/apache2 --with-included-apr
+
+-> if the error "configure: error: pcre-config for libpcre not found. PCRE is required and available from" appears 
+
+-> yum install pcre-devel
+
+
 ~~~
 [root@web01 httpd-2.4.20]# make
 ... (생략)
@@ -127,6 +128,14 @@ make[2]: Leaving directory `/usr/local/src/httpd-2.4.20/support'
 
 make[1]: Leaving directory `/usr/local/src/httpd-2.4.20'
 ~~~
+
+-> if the error "xml/apr_xml.c:35:10: fatal error: expat.h: No such file or directory #include <expat.h>..." appears
+
+-> yum install expat-devel
+
+-> make clean
+
+-> make
 
 ~~~
 [root@web01 httpd-2.4.20]# make install
