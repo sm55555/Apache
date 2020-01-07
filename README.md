@@ -1,5 +1,5 @@
 # apache
-enviroment : amazon linux 2
+enviroment : amazon linux 2 (centOS)
 
 ## 1. How to install apache web server (using yum)
 
@@ -14,6 +14,14 @@ sudo systemctl stop httpd
 ~~~
 
 !!! you have to open 80 port using Security Group in AWS
+
+you can use this command
+
+systemctl status httpd
+service httpd status	
+httpd --k
+httpd -k start
+
 
 * * *
 
