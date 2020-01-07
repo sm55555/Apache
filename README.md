@@ -74,10 +74,11 @@ make install
 start apache
 
 ~~~
-/usr/local/apache2/bin/httpd -k start
-/usr/local/apache2/bin/httpd --k  (status check)
-/usr/local/apache2/bin/httpd -k stop
-/usr/local/apache2/bin/httpd -k restart
+cd /usr/local/apache2/bin
+./httpd -k start
+./httpd --k  (status check)
+./httpd -k stop
+./httpd -k restart
 ~~~
 
 
