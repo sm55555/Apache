@@ -18,8 +18,11 @@ sudo systemctl stop httpd
 you can use this command
 
 systemctl status httpd
+
 service httpd status	
+
 httpd --k
+
 httpd -k start
 
 
