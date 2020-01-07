@@ -100,6 +100,10 @@ make[1]: Leaving directory `/usr/local/src/pcre-8.33'
 
 using ./configure --prefix=/usr/local/apache2 --with-included-apr
 
+-> if the error "configure: error: pcre-config for libpcre not found. PCRE is required and available from" appears 
+
+-> yum install pcre-devel
+
 ~~~
 cd /usr/local/src/httpd-2.4.27
 ./configure --prefix=/usr/local/apache2
