@@ -26,15 +26,12 @@ httpd --k
 httpd -k start
 
 
-* * *
-
 ### Main directory
 
 ~~~
 content directory : cd /etc/html/www
 ~~~
 
-* * *
 
 ## 2. How to install apache web server (not using yum)
 
@@ -174,6 +171,6 @@ tcp        0      0 :::80                       :::*                        LIST
 <html><body><h1>It works!</h1></body></html>
 ~~~
 
-
+## 3. How to connect apache web server and openssl
 
 
