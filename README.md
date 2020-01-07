@@ -29,7 +29,7 @@ content directory : cd /etc/html/www
 
 you need make, complier to install apache
 
-install Lasted Version
+##### install Lasted Version
 ~~~
 yum -y install gcc gcc-c++ (yum list | grep gcc)
 
@@ -48,7 +48,7 @@ mv apr-util-1.6.5 ./httpd-2.4.38/srclib/apr-util
 ~~~
 if not downloaded, check version and URL at http://ftp.neowiz.com/apache/httpd
 
-install pcre
+##### install pcre
 
 ~~~
 cd /usr/local/src/pcre-8.41
@@ -57,9 +57,10 @@ make
 make install
 ~~~
 
-install apache
+##### install apache
 
--> --prefix=/usr/local/apache2 means your apache homefolder 
+-> --prefix=/usr/local/apache2 means your apache homefolder
+
 -> if configure: error: Cannot use an external APR-util with the bundled APR error occurred 
 
 using ./configure --prefix=/usr/local/apache2 --with-included-apr
@@ -71,7 +72,7 @@ make
 make install
 ~~~
 
-start apache
+##### start apache
 
 ~~~
 cd /usr/local/apache2/bin
