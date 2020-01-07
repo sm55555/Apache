@@ -1,7 +1,7 @@
 # apache
 enviroment : amazon linux 2
 
-### How to install apache web server (using yum)
+## 1. How to install apache web server (using yum)
 
 ~~~
 sudo yum install httpd -y
@@ -25,7 +25,7 @@ content directory : cd /etc/html/www
 
 * * *
 
-### How to install apache web server (not using yum)
+## 2. How to install apache web server (not using yum)
 
 you need make, complier to install apache
 
