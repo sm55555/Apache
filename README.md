@@ -4,13 +4,13 @@ enviroment : amazon linux 2
 ### 1. How to install apache web server (using yum)
 
 ~~~
--> sudo yum install httpd -y
+sudo yum install httpd -y
 
--> sudo systemctl start httpd
+sudo systemctl start httpd
 
--> sudo systemctl status httpd
+sudo systemctl status httpd
 
--> sudo systemctl stop httpd
+sudo systemctl stop httpd
 ~~~
 
 !!! you have to open 80 port using Security Group
@@ -19,7 +19,9 @@ enviroment : amazon linux 2
 
 ### 2. Main directory
 
-content directory -> cd /etc/html/www
+~~~
+content directory : cd /etc/html/www
+~~~
 
 * * *
 
