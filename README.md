@@ -21,5 +21,6 @@ content directory -> cd /etc/html/www
 
 * * *
 
+### 1. How to install apache web server (not using yum)
 
 
