@@ -84,8 +84,8 @@ cd /usr/local/apache2/bin
 
 
 ~~~linux
-[root@web01 pcre-8.33]# cd /usr/local/src/httpd-2.4.20
-[root@web01 httpd-2.4.20]# ./configure --prefix=/usr/local/apache2
+**[root@test pcre-8.33]#** cd /usr/local/src/httpd-2.4.20
+**[root@test httpd-2.4.20]#** ./configure --prefix=/usr/local/apache2
 ... (생략)
 config.status: creating build/config_vars.sh
 config.status: creating include/ap_config_auto.h
