@@ -57,6 +57,30 @@ make
 make install
 ~~~
 
+~~~
+[root@web01 ~]# cd /usr/local/src/pcre-8.33
+[root@web01 pcre-8.33]# ./configure
+... (생략)
+    Link pcretest with libreadline .. : no
+    Valgrind support ................ : no
+    Code coverage ................... : no
+~~~
+
+~~~
+[root@web01 pcre-8.33]# make
+... (생략)
+  CXX      pcre_stringpiece_unittest-pcre_stringpiece_unittest.o
+  CXXLD    pcre_stringpiece_unittest
+make[1]: Leaving directory `/usr/local/src/pcre-8.33'
+~~~
+
+~~~
+[root@web01 pcre-8.33]# make install
+make[3]: Leaving directory `/usr/local/src/pcre-8.33'
+make[2]: Leaving directory `/usr/local/src/pcre-8.33'
+make[1]: Leaving directory `/usr/local/src/pcre-8.33'
+~~~
+
 ##### install apache
 
 -> --prefix=/usr/local/apache2 means your apache homefolder
@@ -72,6 +96,31 @@ make
 make install
 ~~~
 
+~~~
+[root@web01 pcre-8.33]# cd /usr/local/src/httpd-2.4.20
+[root@web01 httpd-2.4.20]# ./configure --prefix=/usr/local/apache2
+... (생략)
+config.status: creating build/config_vars.sh
+config.status: creating include/ap_config_auto.h
+config.status: executing default commands
+~~~
+
+~~~
+[root@web01 httpd-2.4.20]# make
+... (생략)
+make[2]: Leaving directory `/usr/local/src/httpd-2.4.20/support'
+
+make[1]: Leaving directory `/usr/local/src/httpd-2.4.20'
+~~~
+
+~~~
+[root@web01 httpd-2.4.20]# make install
+... (생략)
+mkdir /usr/local/apache2/man/man8
+mkdir /usr/local/apache2/manual
+make[1]: Leaving directory `/usr/local/src/httpd-2.4.20'
+~~~
+
 ##### start apache
 
 ~~~
@@ -82,14 +131,23 @@ cd /usr/local/apache2/bin
 ./httpd -k restart
 ~~~
 
+~~~
+[root@web ~]# /usr/local/apache2/bin/httpd -k start
+[root@web ~]# ps -ef | grep httpd | grep -v grep
+root     35683     1  0 17:09 ?        00:00:00 /usr/local/apache2/bin/httpd -k start
+daemon   35684 35683  0 17:09 ?        00:00:00 /usr/local/apache2/bin/httpd -k start
+daemon   35685 35683  0 17:09 ?        00:00:00 /usr/local/apache2/bin/httpd -k start
+daemon   35686 35683  0 17:09 ?        00:00:00 /usr/local/apache2/bin/httpd -k start
+~~~
 
-~~~linux
-**[root@test pcre-8.33]#** cd /usr/local/src/httpd-2.4.20
-**[root@test httpd-2.4.20]#** ./configure --prefix=/usr/local/apache2
-... (생략)
-config.status: creating build/config_vars.sh
-config.status: creating include/ap_config_auto.h
-config.status: executing default commands
+~~~
+[root@web ~]# netstat -anp | grep httpd
+tcp        0      0 :::80                       :::*                        LISTEN      35683/httpd
+~~~
+
+~~~
+[root@web01 ~]# curl http://127.0.0.1
+<html><body><h1>It works!</h1></body></html>
 ~~~
 
 
