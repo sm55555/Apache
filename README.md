@@ -55,7 +55,7 @@ tar xvf apr-util-1.6.1.tar.bz2
 tar xvf httpd-2.4.38.tar.bz2
 tar xvf pcre-8.41.tar.bz2
 mv apr-1.6.5 ./httpd-2.4.38/srclib/apr
-mv apr-util-1.6.5 ./httpd-2.4.38/srclib/apr-util
+mv apr-util-1.6.1 ./httpd-2.4.38/srclib/apr-util
 ~~~
 if not downloaded, check version and URL at http://ftp.neowiz.com/apache/httpd
 
