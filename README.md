@@ -111,11 +111,11 @@ config.status: executing default commands
 
 -> if the error "configure: error: Cannot use an external APR-util with the bundled APR error occurred" appears 
 
--> ./configure --prefix=/usr/local/apache2 --with-included-apr
+* ./configure --prefix=/usr/local/apache2 --with-included-apr
 
 -> if the error "configure: error: pcre-config for libpcre not found. PCRE is required and available from" appears 
 
--> yum install pcre-devel
+* yum install pcre-devel
 
 
 ~~~
@@ -128,11 +128,11 @@ make[1]: Leaving directory `/usr/local/src/httpd-2.4.20'
 
 -> if the error "xml/apr_xml.c:35:10: fatal error: expat.h: No such file or directory #include <expat.h>..." appears
 
--> yum install expat-devel
+* yum install expat-devel
 
--> make clean (compile initialize)
+* make clean (compile initialize)
 
--> make
+* make
 
 ~~~
 [root@web01 httpd-2.4.20]# make install
