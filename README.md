@@ -94,7 +94,7 @@ make[1]: Leaving directory `/usr/local/src/pcre-8.33'
 -> --prefix=/usr/local/apache2 means your apache homefolder
 
 ~~~
-cd /usr/local/src/httpd-2.4.27
+cd /usr/local/src/httpd-2.4.38
 ./configure --prefix=/usr/local/apache2
 make
 make install
