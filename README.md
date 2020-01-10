@@ -95,7 +95,7 @@ make[1]: Leaving directory `/usr/local/src/pcre-8.33'
 
 ~~~
 cd /usr/local/src/httpd-2.4.38
-./configure --prefix=/usr/local/apache2
+./configure --prefix=/usr/local/apache2 --with-included-apr
 make
 make install
 ~~~
