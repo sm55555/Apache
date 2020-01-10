@@ -130,6 +130,10 @@ make[1]: Leaving directory `/usr/local/src/httpd-2.4.20'
 
 * yum install expat-devel
 
+* make clean (compile initialize)
+
+* make
+
 -> if the error "collect2: error: ld returned 1 exit status" appears
 
 * ./configure --prefix=/usr/local/apache2 --with-included-apr
