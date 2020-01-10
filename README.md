@@ -102,7 +102,7 @@ make install
 
 ~~~
 [root@web01 pcre-8.33]# cd /usr/local/src/httpd-2.4.20
-[root@web01 httpd-2.4.20]# ./configure --prefix=/usr/local/apache2
+[root@web01 httpd-2.4.20]# ./configure --prefix=/usr/local/apache2 --with-included-apr
 ... (생략)
 config.status: creating build/config_vars.sh
 config.status: creating include/ap_config_auto.h
@@ -129,6 +129,10 @@ make[1]: Leaving directory `/usr/local/src/httpd-2.4.20'
 -> if the error "xml/apr_xml.c:35:10: fatal error: expat.h: No such file or directory #include <expat.h>..." appears
 
 * yum install expat-devel
+
+-> if the error "collect2: error: ld returned 1 exit status" appears
+
+* ./configure --prefix=/usr/local/apache2 --with-included-apr
 
 * make clean (compile initialize)
 
