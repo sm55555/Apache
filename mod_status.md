@@ -24,6 +24,5 @@ allow from [.도메인주소]
 : 아래와 같은 형식으로 웹 브라우저에 입력하면 아래 그림과 같은 화면을 볼 수 있습니다.
 
 <div>
-	<img width="100%" height="300px" src="https://user-images.githubusercontent.com/38831314/102948558-8139c080-4509-11eb-8fc4-5ac4ceba7573.PNG
-">
+	<img width="100%" height="300px" src="https://user-images.githubusercontent.com/38831314/102948558-8139c080-4509-11eb-8fc4-5ac4ceba7573.PNG">
 </div>
