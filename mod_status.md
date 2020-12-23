@@ -4,14 +4,15 @@
 
 1. 별도의 설치 없이 httpd.conf 파일에 아래의 내용을 추가합니다.
 
-==================
+
+```
 <Location /server-status>
 SetHandler server-status
 order allow,deny
 allow from all
 allow from [.도메인주소]
 </Location>
-==================
+```
 
 이 후 아파치 재시작
 # /usr/local/apache2/bin/apachectl restart
