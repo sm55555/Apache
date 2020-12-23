@@ -23,4 +23,4 @@ allow from [.도메인주소]
 2. 웹페이지에서 정상적으로 상태가 나타나는지 확인
 : 아래와 같은 형식으로 웹 브라우저에 입력하면 아래 그림과 같은 화면을 볼 수 있습니다.
 
-	<img width="100%" height="100%" src="https://user-images.githubusercontent.com/38831314/102948558-8139c080-4509-11eb-8fc4-5ac4ceba7573.PNG">
+<img width="70%" height="70%" src="https://user-images.githubusercontent.com/38831314/102948558-8139c080-4509-11eb-8fc4-5ac4ceba7573.PNG">
