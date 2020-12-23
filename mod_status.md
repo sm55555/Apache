@@ -15,7 +15,10 @@ allow from [.도메인주소]
 ```
 
 이 후 아파치 재시작
-# /usr/local/apache2/bin/apachectl restart
+
+```
+/usr/local/apache2/bin/apachectl restart
+```
 
 2. 웹페이지에서 정상적으로 상태가 나타나는지 확인
 : 아래와 같은 형식으로 웹 브라우저에 입력하면 아래 그림과 같은 화면을 볼 수 있습니다.
