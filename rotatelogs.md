@@ -1,5 +1,24 @@
 # apache rotatelogs 설정 방법
 
+
+월별 로그파일 생성 스크립트
+
+```
+#!/bin/bash
+
+
+TDATE1=`date +%Y%m --date '1 months ago'`
+TDATE2=`date +%Y-%m --date '1 months ago'`
+
+cd $1
+pwd
+mkdir $TDATE1
+mv *$TDATE1* $TDATE1
+mv *$TDATE2* $TDATE1
+
+```
+
+
 아파치가 설치 되면서 자동으로 rotatelogs 깔림
 
 ```
