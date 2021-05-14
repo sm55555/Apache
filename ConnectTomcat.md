@@ -17,21 +17,21 @@
 
 ## 아파치 - 톰캣 연동 순서 
 
-1. 아파치, 톰캣 각각 설치
+### 1. 아파치, 톰캣 각각 설치
 
-2. JK connector 설치 
+### 2. JK connector 설치 
 - 아파치가 설치된 경로의 modules 디렉터리에 mod_jk 파일을 위치시킨다. http.conf의 mod_jk.so 위치와 일치해야함.
 
 #### *mod_jk 모듈이란? 
 
 AJP프로토콜을 사용하여 톰캣과 연동하기 위해 만들어진 모듈이다. mod_jk는 톰캣에서 배포되고 ,(톰캣 홈페이지에서 tomcat-connector 다운 ) 아파치 웹서버에 설치해주어야 한다. 
 
-3. 아파치 설정
+### 3. 아파치 설정
 
 1) workers.properties 파일 생성
 - workers.properties에 연동할 톰캣의 정보 (host, port, lbfactor (작업할당량) 등) 
 
-₩₩₩
+~~~
 worker.list=webmail, sysman, mobile  // 이름은 임의로 설정
 
 
@@ -48,13 +48,13 @@ worker.sysman.port=8019 // 포트중첩 불가.
 worker.mobile.type=ajp13
 worker.mobile.host=localhost
 worker.mobile.port=8019 // 포트중첩 불가. 
-₩₩₩
+~~~
 
+2) 연동할 톰캣의 정보를 가진 properties파일은 생성 했으면 아파치가 실행할때 참조하는 httpd.conf파일에 이를 명시해주어야한다.
 
-  2) 연동할 톰캣의 정보를 가진 properties파일은 생성 했으면 아파치가 실행할때 참조하는 httpd.conf파일에 이를 명시해주어야한다.
+3) httpd.conf
 
-  3) httpd.conf
-
+~~~
 LoadModule jk_module /etc/apache2/modules/mod_jk.so
 # mod_jk.so의 위치
 
@@ -76,6 +76,8 @@ JkMount /mobile/* mobile
 .
 
 # URL에 따른 요청 처리 설정
+~~~
+
 * JkMount: 이 부분에서 어떤 URL로 오는 경우, 어떤 worker(톰캣)가 처리할 지 결정할지 설정한다.
 
 JkMount 뒤에 오는 /* 는 모든 url의 요청을 의미한다.
@@ -88,22 +90,25 @@ JkMount 뒤에 오는 /* 는 모든 url의 요청을 의미한다.
 
  
 
-4. 톰캣 설정 - server.xml 
+### 4. 톰캣 설정 - server.xml 
 
-  1) 기존의 HTTP 커넥터(8080port) 제거 (주석처리) 
+   1) 기존의 HTTP 커넥터(8080port) 제거 (주석처리) 
 
       -아파치를 통해 :80 가상 포트로 접속하기 때문에, 톰캣으로 직접 접속하는 :8080 포트는 사용을 막는다.
-
+~~~
 <!--
 <Connector URIEncoding="UTF-8" connectiontimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443" server=" " maxPostZize="1-"/>
 -->
- 
+~~~ 
 
-  2) AJP 커넥터 설정 (주석 해제)  
+   2) AJP 커넥터 설정 (주석 해제)  
 
+~~~
 <!-- Define an AJP 1.3 Connector on port 8009 -->
 <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" address="localhost"/>
-   이 ajp커넥터에 등록한 정보와 아파치 workers.properties의 정보가 일치해야 통신이 가능하다.
+~~~
+
+이 ajp커넥터에 등록한 정보와 아파치 workers.properties의 정보가 일치해야 통신이 가능하다.
 
    
 
@@ -115,16 +120,13 @@ JkMount 뒤에 오는 /* 는 모든 url의 요청을 의미한다.
 아파치는 이를 사용하여 80포트로 들어오는 요청은 자신이 받고, 이 요청중 서블릿을 필요로 하는 요청은 톰캣에게 전달하여 처리한다. (httpd.conf 의 JkMount설정 )
 
 해당 프로토콜(ajp)는 다양한 WAS에서 지원한다. ex) 아파치, 톰캣, 제우스, 웹로직, 웹스피어 등... 
+ 
+
+### 5. 아파치, 톰캣 모두 설정 완료 후, 각각 재기동. 
 
  
 
- 
-
-5. 아파치, 톰캣 모두 설정 완료 후, 각각 재기동. 
-
- 
-
-6. 아파치 80 접속 확인 
+### 6. 아파치 80 접속 확인 
 
  - 8080 포트 없이 접속되는지 확인한다. 
 
