@@ -181,4 +181,3 @@ tcp        0      0 :::80                       :::*                        LIST
 
 ## 3. How to connect apache web server and openssl
 
-꼭한다 씨발거,,,,,,
