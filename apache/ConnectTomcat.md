@@ -19,8 +19,11 @@
 
 ### 1. 아파치, 톰캣 각각 설치
 
-### 2. JK connector 설치 
+### 2. JK connector 설치
 - 아파치가 설치된 경로의 modules 디렉터리에 mod_jk 파일을 위치시킨다. http.conf의 mod_jk.so 위치와 일치해야함.
+
+
+과정은?
 
 #### *mod_jk 모듈이란? 
 
