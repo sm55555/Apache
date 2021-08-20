@@ -22,8 +22,8 @@
 ### 2. JK connector 설치
 - 아파치가 설치된 경로의 modules 디렉터리에 mod_jk 파일을 위치시킨다. http.conf의 mod_jk.so 위치와 일치해야함.
 
-과정은?
-
+과정
+```
 wget https://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
 gcc 필요한거 install 해주기
 mv tomcat-connectors-1.2.42-src/ /usr/local/src
@@ -34,7 +34,7 @@ cd /usr/local/src/tomcat-connectors-1.2.48-src/native/
 ./configure --with-apxs=/data/was/jbcs-2.4.37/httpd/sbin/apxs
 make && make install
 find / -name "mod_jk.so"
-
+````
 #### *mod_jk 모듈이란? 
 
 AJP프로토콜을 사용하여 톰캣과 연동하기 위해 만들어진 모듈이다. mod_jk는 톰캣에서 배포되고 ,(톰캣 홈페이지에서 tomcat-connector 다운 ) 아파치 웹서버에 설치해주어야 한다. 
