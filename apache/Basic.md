@@ -179,5 +179,10 @@ tcp        0      0 :::80                       :::*                        LIST
 <html><body><h1>It works!</h1></body></html>
 ~~~
 
-## 3. How to connect apache web server and openssl
+## 3. Web Source 
 
+httpd.conf
+
+```
+DocumentRoot "/data/was/apps/resources"
+```
