@@ -186,3 +186,11 @@ httpd.conf
 ```
 DocumentRoot "/data/was/apps/resources"
 ```
+
+## 4.The number of people who use apache 
+
+check port !
+
+```
+netstat -nap | grep :80 | grep ESTABLISHED | wc -l
+```
