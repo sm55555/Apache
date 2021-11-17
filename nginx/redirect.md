@@ -13,11 +13,13 @@ IPv4 HTTP 동작
 
 IPv6 HTTP 동작
 
-#### 4. return 301 https://$host$request_uri;
+#### 4. SSL Redirect 설정
 
+```
+return 301 https://$host$request_uri;
+```
 
-
-에제 
+예제 
 
 test.com, www.test.com의 모든 HTTP 트래픽은 HTTPS로 리다이렉션 된다.
 
