@@ -1,4 +1,4 @@
-### workers.properties
+##### workers.properties
 
 workers는 back-end에 위치한 각 Tomcat 인스턴스들을 가리킨다. 이 workers.properties 파일은 Apache HTTP Server에서 연결하고자 하는 Tomcat에 대한 정의 및 설정 파일이다. 
 
@@ -16,7 +16,7 @@ worker.template.connection_pool_minsizee 최소 WAS 커넥션 수 설정 32
 worker.template.onnection_pool_timeout 커넥션 연결 종료 후 재사용 대기 시간 60
 ```
 
-### WAS 1,2번기 분기
+##### WAS 1,2번기 분기 (예시)
 
 ```console 
 worker.list=wlb
