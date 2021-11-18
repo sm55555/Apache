@@ -21,7 +21,7 @@ worker.template.onnection_pool_timeout 커넥션 연결 종료 후 재사용 대
 ```console 
 worker.list=wlb
 
-# configuration template
+#configuration template
 worker.template.type=ajp13
 worker.template.maintain=30
 worker.template.lbfactor=1
@@ -34,7 +34,7 @@ worker.template.ping_timeout=10000
 
 worker.template.connection_pool_timeout=60
 
-# configuration was1
+#configuration was1
 worker.was1.reference=worker.template
 worker.was1.host=10.xxx.xx.10
 worker.was1.port=9009
@@ -44,7 +44,7 @@ worker.was2.reference=worker.template
 worker.was2.host=10.xxx.xx.11
 worker.was2.port=9009
 
-# configuration loadbalancer
+#configuration loadbalancer
 worker.wlb.type=lb
 worker.wlb.retries=2
 worker.wlb.method=Session
