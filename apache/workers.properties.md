@@ -26,7 +26,7 @@ worker.template.onnection_pool_timeout 커넥션 연결 종료 후 재사용 대
 
 ### WAS 1,2번기 분기
 
-```sh
+```bash
 worker.list=wlb
 
 # configuration template
