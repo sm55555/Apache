@@ -1,4 +1,4 @@
-## jeus 연동
+## JEUS 연동
 
 ### webtob를 추가 
 
