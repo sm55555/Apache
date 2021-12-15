@@ -1,5 +1,14 @@
 ### wsadmin 명령어
 
+si (wetob에서 jeus 연결 상태 확인) RDY는 연결 상태, NRDY는 연결 중지된 상태
+```
+------------------------------------------------------------------------------------------
+ hth   svrname (svri)   status      reqs     count cqcnt    aqcnt qpcnt emcnt rscnt rbcnt
+------------------------------------------------------------------------------------------
+   0  MyGroup    (  0)   RDY           4         4     0        0     0     0     0     0
+
+```
+
 ci -s    (지금 접속한 사용자)
 ```
        Clients  Unique IPs  Dropped
