@@ -10,9 +10,9 @@
 ![image](https://user-images.githubusercontent.com/38831314/146140451-08fa50e8-24aa-4840-a016-47abc5510e96.png)
 
 ```
-Registration Id required (webtob의 서버절을 참고)
-Hth Count	
-Port(JSV PORT 참고)
+Registration Id required (webtob의 SERVER절을 참고)
+Hth Count	(webtob의 NODE절을 참고)
+Port(webtob의 NODE절을 참고)
 Ip Address (hostname으로도 변경 가능 운영에 용이)
 ```
 ![image](https://user-images.githubusercontent.com/38831314/146136389-ca142716-1c2c-4a9a-ad2d-94d6518e9c48.png)
