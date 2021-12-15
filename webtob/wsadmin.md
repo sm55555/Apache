@@ -40,4 +40,10 @@ max user processes              (-u) 4096
 virtual memory          (kbytes, -v) unlimited
 file locks                      (-x) unlimited
 ```
-  
+
+FD16384 이게 수용인원 최대값임 물론 OS도 제한을 확인해야함
+
+```
+test:/home/webtob5/webtob/config>wsadmin -v
+WebtoB 5.0 SP 0 Fix #2 Linux-K2.6_x64 FD16384 B127 epoll 2018/07/2
+```
