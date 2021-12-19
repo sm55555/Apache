@@ -34,6 +34,9 @@ Prefork 동작방식이 1개의 프로세스가 1개의 스레드로 처리가 �
 
 httpd -V" 또는 "httpd -l" 명령어로 확인
 
+![image](https://user-images.githubusercontent.com/38831314/146679759-0be44bb8-034b-4295-b8ab-30a6dcdf2d9d.png)
+
+
 ## nginx
 
 Nginx 는 Event-Driven 방식으로 동작한다. 한 개 또는 고정된 프로세스만 생성 하고, 그 프로세스 내부에서 비동기 방식으로 효율적으로 작업을 처리한다. 따라서 동시 접속 요청이 많아도 Process 또는 Thread 생성 비용이 존재하지 않는다.
