@@ -1,5 +1,9 @@
 # MPM (Mulit Proceesing Module)
 
+MPM에는 prefork, worker, event 방식이 있으며 event가 가장 효율적이다. prefork는 쓰레드를 지원하지 않는 어플리케이션을 사용하는 경우 쓰는데 메모리를 많이 먹는다. worker는 중간.
+
+
+
 ## 사용 MPM 버전 확인
 
 
