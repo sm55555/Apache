@@ -9,7 +9,7 @@ Server MPM:     Prefork
  -D APACHE_MPM_DIR="server/mpm/prefork"
 ```
 
-conf/extra/httpd-mpm.conf 위치에 MPM 설정 값이 있다.
+### conf/extra/httpd-mpm.conf 위치에 MPM 설정 값이 있다.
 
 ```
 # prefork MPM
