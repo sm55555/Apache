@@ -39,4 +39,7 @@ IIS로 돌아가서 이전에 만든 가상 디렉토리 창에서 처리기 매
 ![image](https://user-images.githubusercontent.com/38831314/155097618-a26e3367-6fcb-4789-bc6e-9c31b4482f16.png)
 
 
+## 안되면 weblogic 해당 서비스 재기동
+
+
 
