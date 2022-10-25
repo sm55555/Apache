@@ -1,8 +1,8 @@
 # Allow Only Domaing Access
 
-httpd.conf
+### httpd.conf
 
-80,443 port
+#### 80,443 port
 
 ```
 <VirtualHost *:80>
