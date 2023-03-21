@@ -15,16 +15,15 @@ sudo systemctl stop httpd
 
 you have to open 80 port using Security Group in AWS
 
+```
 you can use this command
-
 systemctl status httpd
-
 service httpd status	
-
 httpd --k
-
 httpd -k start
-
+httpd -k graceful : 기존 접속은 두고 접속된 커넥션은 두고 설정파일 호출 후 재실행
+apachectl configtest : Apache conf 검증
+```
 
 ### Main directory
 
