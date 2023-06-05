@@ -1,6 +1,6 @@
 
 
-모든 트래픽을 S3 버킷으로 proxy_pass에 넣는다. IAM Role 필요, Bucket 컨텐츠만 볼 수 있다.
+모든 트래픽을 S3 버킷으로 proxy_pass에 넣는다. IAM Role(Bucket 내용 조회등 일부 권한) 필요, Bucket 컨텐츠만 볼 수 있다.
 HTML에 Bucket full 주소가 있어도 거기 내부에 있는 s3 콘텐츠는 못읽는다 생각해봐.. 내부에서는 s3~~주소로 받을건데 확인은 불가능 하다.
 
 하지만 proxy 설정을 하면
