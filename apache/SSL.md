@@ -37,5 +37,11 @@ SSLPassPhraseDialog exec:/web/Apache2.2.31/conf/ssl_passwd.sh -> ssl_passwd.sh�
 echo "1234"
 ```
 
+### conf에 걸려있는 설저 보는 방법
+
+```
+apachectl -S | grep conf
+```
+
 
 
