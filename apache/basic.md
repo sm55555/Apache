@@ -1,7 +1,7 @@
 # apache
 enviroment : amazon linux 2 (centOS)
 
-## 1. How to install apache web server (using yum)
+### How to install apache web server (using yum)
 
 ~~~
 sudo yum install httpd -y
@@ -32,7 +32,7 @@ content directory : cd /etc/html/www
 ~~~
 
 
-## 2. How to install apache web server (not using yum)
+### How to install apache web server (not using yum)
 
 you need make, complier to install apache
 
@@ -178,7 +178,7 @@ tcp        0      0 :::80                       :::*                        LIST
 <html><body><h1>It works!</h1></body></html>
 ~~~
 
-## 3. Web Source 
+### Web Source 
 
 httpd.conf
 
@@ -186,10 +186,20 @@ httpd.conf
 DocumentRoot "/data/was/apps/resources"
 ```
 
-## 4.The number of people who use apache 
+### The number of people who use apache 
 
 check port !
 
 ```
 netstat -nap | grep :80 | grep ESTABLISHED | wc -l
 ```
+
+### Check Setting On Apache
+
+```
+[root@web01 ~]# httpd -S
+```
+
+
+
+
