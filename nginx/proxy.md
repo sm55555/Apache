@@ -23,4 +23,5 @@ nginx.conf + Disable DNS Caching
     }
   }
 ```
+reslover 구문과 proxy_pass를 변수처리해야 호출 할때마다 DNS 를 질의해서 신규 IP로 통신을한다 그렇지 않으면 예전의 IP로 호출을 한다.
 
