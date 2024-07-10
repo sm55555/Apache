@@ -7,6 +7,8 @@ HTML에 Bucket full 주소가 있어도 거기 내부에 있는 s3 콘텐츠는 
 
 https://192.168.0.1/test.jpg라고 브라우저가 하면 -> 서버는 proxy로 넘겨서 s3콘텐츠를 볼 수 있다.
 
+https://test.s3.ap-northeast-2.amazonaws.com/test.jpg 를 찌른다 .
+
 
 ```nginx
 location / {
