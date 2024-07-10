@@ -9,6 +9,8 @@ https://192.168.0.1/test.jpg라고 브라우저가 하면 -> 서버는 proxy로 
 
 https://test.s3.ap-northeast-2.amazonaws.com/test.jpg 를 찌른다 .
 
+csv는 다운받아지고 png는 보인다.
+
 
 ```nginx
 location / {
